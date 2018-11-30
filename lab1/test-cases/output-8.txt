@@ -1,0 +1,14 @@
+Symbol Table
+X21=1
+X31=2
+
+Memory Map
+0:  1001
+1:  2001
+2:  3001
+
+Warning: In module 0 X21 appeared in the use list but was not actually used.
+
+Warning: X31 was defined in module 2 but never used.
+
+Error: In module 2 the def of X31 exceeds the module size; zero (relative) used.

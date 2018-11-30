@@ -1,0 +1,21 @@
+Symbol Table
+x=0
+y=1
+
+Memory Map
+0:  4001
+1:  4001
+2:  4001
+
+Warning: In module 0 z appeared in the use list but was not actually used.
+Warning: In module 0 y appeared in the use list but was not actually used.
+Warning: In module 1 z appeared in the use list but was not actually used.
+Warning: In module 1 x appeared in the use list but was not actually used.
+Warning: In module 2 x appeared in the use list but was not actually used.
+Warning: In module 2 y appeared in the use list but was not actually used.
+
+Error: In module 0 the def of x exceeds the module size; zero (relative) used.
+Error: In module 1 the def of y exceeds the module size; zero (relative) used.
+
+Error: In module 0 z is in the use list but was not defined.
+Error: In module 1 z is in the use list but was not defined.

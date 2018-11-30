@@ -1,0 +1,22 @@
+Symbol Table
+x=0
+y=1
+z=3
+
+Memory Map
+0:  1003
+1:  1001
+2:  1002
+3:  1003
+4:  1004
+5:  1001 Error: External address exceeds length of use list; treated as immediate.
+6:  2000 Error: xy is not defined; zero used.
+7:  1005
+
+Warning: In module 1 x appeared in the use list but was not actually used.
+Warning: In module 2 x appeared in the use list but was not actually used.
+Warning: In module 4 xz appeared in the use list but was not actually used.
+
+Warning: y was defined in module 0 but never used.
+
+Error: In module 4 xz is in the use list but was not defined.
