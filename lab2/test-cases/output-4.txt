@@ -1,0 +1,191 @@
+The original input was: 5  0 3 200 3  0 9 500 3  0 20 500 3  100 1 100 3  100 100 500 3 
+The (sorted) input is:  5  0 3 200 3  0 9 500 3  0 20 500 3  100 1 100 3  100 100 500 3 
+
+The scheduling algorithm used was First Come First Served
+
+Process 0:
+	(A,B,C,IO) = (0,3,200,3)
+	Finishing time: 1713
+	Turnaround time: 1713
+	I/O time: 180
+	Waiting time: 1333
+
+Process 1:
+	(A,B,C,IO) = (0,9,500,3)
+	Finishing time: 1821
+	Turnaround time: 1821
+	I/O time: 204
+	Waiting time: 1117
+
+Process 2:
+	(A,B,C,IO) = (0,20,500,3)
+	Finishing time: 1404
+	Turnaround time: 1404
+	I/O time: 92
+	Waiting time: 812
+
+Process 3:
+	(A,B,C,IO) = (100,1,100,3)
+	Finishing time: 1818
+	Turnaround time: 1718
+	I/O time: 199
+	Waiting time: 1419
+
+Process 4:
+	(A,B,C,IO) = (100,100,500,3)
+	Finishing time: 757
+	Turnaround time: 657
+	I/O time: 20
+	Waiting time: 137
+
+Summary Data:
+	Finishing time: 1821
+	CPU Utilization: 0.988468
+	I/O Utilization: 0.312466
+	Throughput: 0.274574 processes per hundred cycles
+	Average turnaround time: 1462.599976
+	Average waiting time: 963.599976
+
+The original input was: 5  0 3 200 3  0 9 500 3  0 20 500 3  100 1 100 3  100 100 500 3 
+The (sorted) input is:  5  0 3 200 3  0 9 500 3  0 20 500 3  100 1 100 3  100 100 500 3 
+
+The scheduling algorithm used was Round Robbin
+
+Process 0:
+	(A,B,C,IO) = (0,3,200,3)
+	Finishing time: 1060
+	Turnaround time: 1060
+	I/O time: 198
+	Waiting time: 662
+
+Process 1:
+	(A,B,C,IO) = (0,9,500,3)
+	Finishing time: 1803
+	Turnaround time: 1803
+	I/O time: 198
+	Waiting time: 1105
+
+Process 2:
+	(A,B,C,IO) = (0,20,500,3)
+	Finishing time: 1737
+	Turnaround time: 1737
+	I/O time: 74
+	Waiting time: 1163
+
+Process 3:
+	(A,B,C,IO) = (100,1,100,3)
+	Finishing time: 992
+	Turnaround time: 892
+	I/O time: 202
+	Waiting time: 590
+
+Process 4:
+	(A,B,C,IO) = (100,100,500,3)
+	Finishing time: 1779
+	Turnaround time: 1679
+	I/O time: 21
+	Waiting time: 1158
+
+Summary Data:
+	Finishing time: 1803
+	CPU Utilization: 0.998336
+	I/O Utilization: 0.337770
+	Throughput: 0.277316 processes per hundred cycles
+	Average turnaround time: 1434.199951
+	Average waiting time: 935.599976
+
+The original input was: 5  0 3 200 3  0 9 500 3  0 20 500 3  100 1 100 3  100 100 500 3 
+The (sorted) input is:  5  0 3 200 3  0 9 500 3  0 20 500 3  100 1 100 3  100 100 500 3 
+
+The scheduling algorithm used was Uniprocessor
+
+Process 0:
+	(A,B,C,IO) = (0,3,200,3)
+	Finishing time: 394
+	Turnaround time: 394
+	I/O time: 194
+	Waiting time: 0
+
+Process 1:
+	(A,B,C,IO) = (0,9,500,3)
+	Finishing time: 1097
+	Turnaround time: 1097
+	I/O time: 203
+	Waiting time: 394
+
+Process 2:
+	(A,B,C,IO) = (0,20,500,3)
+	Finishing time: 1685
+	Turnaround time: 1685
+	I/O time: 88
+	Waiting time: 1097
+
+Process 3:
+	(A,B,C,IO) = (100,1,100,3)
+	Finishing time: 1979
+	Turnaround time: 1879
+	I/O time: 194
+	Waiting time: 1585
+
+Process 4:
+	(A,B,C,IO) = (100,100,500,3)
+	Finishing time: 2498
+	Turnaround time: 2398
+	I/O time: 19
+	Waiting time: 1879
+
+Summary Data:
+	Finishing time: 2498
+	CPU Utilization: 0.720576
+	I/O Utilization: 0.279424
+	Throughput: 0.200160 processes per hundred cycles
+	Average turnaround time: 1490.599976
+	Average waiting time: 991.000000
+
+The original input was: 5  0 3 200 3  0 9 500 3  0 20 500 3  100 1 100 3  100 100 500 3 
+The (sorted) input is:  5  0 3 200 3  0 9 500 3  0 20 500 3  100 1 100 3  100 100 500 3 
+
+The scheduling algorithm used was Preemptive Shortest Job First
+
+Process 0:
+	(A,B,C,IO) = (0,3,200,3)
+	Finishing time: 465
+	Turnaround time: 465
+	I/O time: 208
+	Waiting time: 57
+
+Process 1:
+	(A,B,C,IO) = (0,9,500,3)
+	Finishing time: 958
+	Turnaround time: 958
+	I/O time: 198
+	Waiting time: 260
+
+Process 2:
+	(A,B,C,IO) = (0,20,500,3)
+	Finishing time: 1360
+	Turnaround time: 1360
+	I/O time: 77
+	Waiting time: 783
+
+Process 3:
+	(A,B,C,IO) = (100,1,100,3)
+	Finishing time: 405
+	Turnaround time: 305
+	I/O time: 205
+	Waiting time: 0
+
+Process 4:
+	(A,B,C,IO) = (100,100,500,3)
+	Finishing time: 1819
+	Turnaround time: 1719
+	I/O time: 20
+	Waiting time: 1199
+
+Summary Data:
+	Finishing time: 1819
+	CPU Utilization: 0.989555
+	I/O Utilization: 0.316658
+	Throughput: 0.274876 processes per hundred cycles
+	Average turnaround time: 961.400024
+	Average waiting time: 459.799988

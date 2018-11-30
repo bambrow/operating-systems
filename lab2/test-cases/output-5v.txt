@@ -1,0 +1,595 @@
+The original input was: 3  1 5 30 3  1 5 30 4  0 5 30 3 
+The (sorted) input is:  3  0 5 30 3  1 5 30 3  1 5 30 4 
+
+This detailed printout gives the state and remaining burst for each process
+
+Before cycle    0:   unstarted  0  unstarted  0  unstarted  0.
+Before cycle    1:     running  4  unstarted  0  unstarted  0.
+Before cycle    2:     running  3      ready  0      ready  0.
+Before cycle    3:     running  2      ready  0      ready  0.
+Before cycle    4:     running  1      ready  0      ready  0.
+Before cycle    5:     blocked  2    running  3      ready  0.
+Before cycle    6:     blocked  1    running  2      ready  0.
+Before cycle    7:       ready  0    running  1      ready  0.
+Before cycle    8:       ready  0    blocked  2    running  4.
+Before cycle    9:       ready  0    blocked  1    running  3.
+Before cycle   10:       ready  0      ready  0    running  2.
+Before cycle   11:       ready  0      ready  0    running  1.
+Before cycle   12:     running  2      ready  0    blocked  4.
+Before cycle   13:     running  1      ready  0    blocked  3.
+Before cycle   14:     blocked  1    running  5    blocked  2.
+Before cycle   15:       ready  0    running  4    blocked  1.
+Before cycle   16:       ready  0    running  3      ready  0.
+Before cycle   17:       ready  0    running  2      ready  0.
+Before cycle   18:       ready  0    running  1      ready  0.
+Before cycle   19:     running  3    blocked  2      ready  0.
+Before cycle   20:     running  2    blocked  1      ready  0.
+Before cycle   21:     running  1      ready  0      ready  0.
+Before cycle   22:     blocked  2      ready  0    running  1.
+Before cycle   23:     blocked  1    running  4    blocked  4.
+Before cycle   24:       ready  0    running  3    blocked  3.
+Before cycle   25:       ready  0    running  2    blocked  2.
+Before cycle   26:       ready  0    running  1    blocked  1.
+Before cycle   27:     running  1    blocked  2      ready  0.
+Before cycle   28:     blocked  1    blocked  1    running  3.
+Before cycle   29:       ready  0      ready  0    running  2.
+Before cycle   30:       ready  0      ready  0    running  1.
+Before cycle   31:     running  2      ready  0    blocked  1.
+Before cycle   32:     running  1      ready  0      ready  0.
+Before cycle   33:     blocked  3    running  3      ready  0.
+Before cycle   34:     blocked  2    running  2      ready  0.
+Before cycle   35:     blocked  1    running  1      ready  0.
+Before cycle   36:       ready  0    blocked  1    running  3.
+Before cycle   37:       ready  0      ready  0    running  2.
+Before cycle   38:       ready  0      ready  0    running  1.
+Before cycle   39:     running  3      ready  0    blocked  3.
+Before cycle   40:     running  2      ready  0    blocked  2.
+Before cycle   41:     running  1      ready  0    blocked  1.
+Before cycle   42:     blocked  2    running  3      ready  0.
+Before cycle   43:     blocked  1    running  2      ready  0.
+Before cycle   44:       ready  0    running  1      ready  0.
+Before cycle   45:       ready  0    blocked  2    running  5.
+Before cycle   46:       ready  0    blocked  1    running  4.
+Before cycle   47:       ready  0      ready  0    running  3.
+Before cycle   48:       ready  0      ready  0    running  2.
+Before cycle   49:       ready  0      ready  0    running  1.
+Before cycle   50:     running  3      ready  0    blocked  3.
+Before cycle   51:     running  2      ready  0    blocked  2.
+Before cycle   52:     running  1      ready  0    blocked  1.
+Before cycle   53:     blocked  1    running  5      ready  0.
+Before cycle   54:       ready  0    running  4      ready  0.
+Before cycle   55:       ready  0    running  3      ready  0.
+Before cycle   56:       ready  0    running  2      ready  0.
+Before cycle   57:       ready  0    running  1      ready  0.
+Before cycle   58:       ready  0    blocked  1    running  4.
+Before cycle   59:       ready  0      ready  0    running  3.
+Before cycle   60:       ready  0      ready  0    running  2.
+Before cycle   61:       ready  0      ready  0    running  1.
+Before cycle   62:     running  2      ready  0    blocked  1.
+Before cycle   63:     running  1      ready  0      ready  0.
+Before cycle   64:     blocked  2    running  5      ready  0.
+Before cycle   65:     blocked  1    running  4      ready  0.
+Before cycle   66:       ready  0    running  3      ready  0.
+Before cycle   67:       ready  0    running  2      ready  0.
+Before cycle   68:       ready  0    running  1      ready  0.
+Before cycle   69:       ready  0    blocked  1    running  2.
+Before cycle   70:       ready  0      ready  0    running  1.
+Before cycle   71:     running  5      ready  0    blocked  4.
+Before cycle   72:     running  4      ready  0    blocked  3.
+Before cycle   73:     running  3      ready  0    blocked  2.
+Before cycle   74:     running  2      ready  0    blocked  1.
+Before cycle   75:     running  1      ready  0      ready  0.
+Before cycle   76:     blocked  2    running  4      ready  0.
+Before cycle   77:     blocked  1    running  3      ready  0.
+Before cycle   78:       ready  0 terminated  0    running  5.
+Before cycle   79:       ready  0 terminated  0    running  4.
+Before cycle   80:       ready  0 terminated  0    running  3.
+Before cycle   81:       ready  0 terminated  0    running  2.
+Before cycle   82:       ready  0 terminated  0    running  1.
+Before cycle   83:     running  1 terminated  0    blocked  4.
+Before cycle   84:     blocked  3 terminated  0    blocked  3.
+Before cycle   85:     blocked  2 terminated  0    blocked  2.
+Before cycle   86:     blocked  1 terminated  0    blocked  1.
+Before cycle   87:     running  2 terminated  0      ready  0.
+Before cycle   88:     running  1 terminated  0      ready  0.
+Before cycle   89:     blocked  2 terminated  0    running  1.
+Before cycle   90:     blocked  1 terminated  0    blocked  1.
+Before cycle   91:     running  4 terminated  0      ready  0.
+Before cycle   92:     running  3 terminated  0      ready  0.
+Before cycle   93:  terminated  0 terminated  0    running  3.
+Before cycle   94:  terminated  0 terminated  0    running  2.
+The scheduling algorithm used was First Come First Served
+
+Process 0:
+	(A,B,C,IO) = (0,5,30,3)
+	Finishing time: 92
+	Turnaround time: 92
+	I/O time: 21
+	Waiting time: 41
+
+Process 1:
+	(A,B,C,IO) = (1,5,30,3)
+	Finishing time: 77
+	Turnaround time: 76
+	I/O time: 11
+	Waiting time: 35
+
+Process 2:
+	(A,B,C,IO) = (1,5,30,4)
+	Finishing time: 94
+	Turnaround time: 93
+	I/O time: 25
+	Waiting time: 38
+
+Summary Data:
+	Finishing time: 94
+	CPU Utilization: 0.957447
+	I/O Utilization: 0.531915
+	Throughput: 3.191489 processes per hundred cycles
+	Average turnaround time: 87.000000
+	Average waiting time: 38.000000
+
+The original input was: 3  1 5 30 3  1 5 30 4  0 5 30 3 
+The (sorted) input is:  3  0 5 30 3  1 5 30 3  1 5 30 4 
+
+This detailed printout gives the state and remaining burst for each process
+
+Before cycle    0:   unstarted  0  unstarted  0  unstarted  0.
+Before cycle    1:     running  2  unstarted  0  unstarted  0.
+Before cycle    2:     running  1      ready  0      ready  0.
+Before cycle    3:       ready  0    running  2      ready  0.
+Before cycle    4:       ready  0    running  1      ready  0.
+Before cycle    5:       ready  0    blocked  1    running  1.
+Before cycle    6:     running  2      ready  0    blocked  2.
+Before cycle    7:     running  1      ready  0    blocked  1.
+Before cycle    8:     blocked  2    running  2      ready  0.
+Before cycle    9:     blocked  1    running  1      ready  0.
+Before cycle   10:       ready  0    blocked  1    running  2.
+Before cycle   11:       ready  0      ready  0    running  1.
+Before cycle   12:     running  2      ready  0      ready  0.
+Before cycle   13:     running  1      ready  0      ready  0.
+Before cycle   14:     blocked  3    running  2      ready  0.
+Before cycle   15:     blocked  2    running  1      ready  0.
+Before cycle   16:     blocked  1      ready  0    running  2.
+Before cycle   17:       ready  0      ready  0    running  1.
+Before cycle   18:       ready  0    running  1      ready  0.
+Before cycle   19:     running  2    blocked  3      ready  0.
+Before cycle   20:     running  1    blocked  2      ready  0.
+Before cycle   21:       ready  0    blocked  1    running  1.
+Before cycle   22:     running  2      ready  0    blocked  4.
+Before cycle   23:     running  1      ready  0    blocked  3.
+Before cycle   24:       ready  0    running  2    blocked  2.
+Before cycle   25:       ready  0    running  1    blocked  1.
+Before cycle   26:     running  1    blocked  1      ready  0.
+Before cycle   27:     blocked  1      ready  0    running  2.
+Before cycle   28:       ready  0      ready  0    running  1.
+Before cycle   29:       ready  0    running  2      ready  0.
+Before cycle   30:       ready  0    running  1      ready  0.
+Before cycle   31:     running  2    blocked  3      ready  0.
+Before cycle   32:     running  1    blocked  2      ready  0.
+Before cycle   33:       ready  0    blocked  1    running  1.
+Before cycle   34:     running  2      ready  0    blocked  4.
+Before cycle   35:     running  1      ready  0    blocked  3.
+Before cycle   36:     blocked  1    running  2    blocked  2.
+Before cycle   37:       ready  0    running  1    blocked  1.
+Before cycle   38:     running  1      ready  0      ready  0.
+Before cycle   39:     blocked  3    running  1      ready  0.
+Before cycle   40:     blocked  2    blocked  2    running  2.
+Before cycle   41:     blocked  1    blocked  1    running  1.
+Before cycle   42:     running  1      ready  0      ready  0.
+Before cycle   43:     blocked  3    running  2      ready  0.
+Before cycle   44:     blocked  2    running  1      ready  0.
+Before cycle   45:     blocked  1      ready  0    running  1.
+Before cycle   46:       ready  0    running  1    blocked  3.
+Before cycle   47:     running  2    blocked  1    blocked  2.
+Before cycle   48:     running  1      ready  0    blocked  1.
+Before cycle   49:       ready  0    running  2      ready  0.
+Before cycle   50:       ready  0    running  1      ready  0.
+Before cycle   51:     running  2      ready  0      ready  0.
+Before cycle   52:     running  1      ready  0      ready  0.
+Before cycle   53:       ready  0      ready  0    running  2.
+Before cycle   54:       ready  0      ready  0    running  1.
+Before cycle   55:       ready  0    running  1      ready  0.
+Before cycle   56:     running  1    blocked  2      ready  0.
+Before cycle   57:     blocked  2    blocked  1    running  2.
+Before cycle   58:     blocked  1      ready  0    running  1.
+Before cycle   59:       ready  0    running  2    blocked  3.
+Before cycle   60:       ready  0    running  1    blocked  2.
+Before cycle   61:     running  2      ready  0    blocked  1.
+Before cycle   62:     running  1      ready  0      ready  0.
+Before cycle   63:       ready  0    running  2      ready  0.
+Before cycle   64:       ready  0    running  1      ready  0.
+Before cycle   65:       ready  0      ready  0    running  2.
+Before cycle   66:       ready  0      ready  0    running  1.
+Before cycle   67:     running  2      ready  0    blocked  4.
+Before cycle   68:     running  1      ready  0    blocked  3.
+Before cycle   69:     blocked  3    running  1    blocked  2.
+Before cycle   70:     blocked  2    blocked  2    blocked  1.
+Before cycle   71:     blocked  1    blocked  1    running  2.
+Before cycle   72:       ready  0      ready  0    running  1.
+Before cycle   73:     running  2      ready  0      ready  0.
+Before cycle   74:     running  1      ready  0      ready  0.
+Before cycle   75:       ready  0    running  1      ready  0.
+Before cycle   76:       ready  0    blocked  1    running  2.
+Before cycle   77:       ready  0      ready  0    running  1.
+Before cycle   78:     running  2      ready  0    blocked  2.
+Before cycle   79:     running  1      ready  0    blocked  1.
+Before cycle   80:  terminated  0    running  2      ready  0.
+Before cycle   81:  terminated  0    running  1      ready  0.
+Before cycle   82:  terminated  0    blocked  2    running  1.
+Before cycle   83:  terminated  0    blocked  1    blocked  1.
+Before cycle   84:  terminated  0    running  2      ready  0.
+Before cycle   85:  terminated  0    running  1      ready  0.
+Before cycle   86:  terminated  0 terminated  0    running  2.
+Before cycle   87:  terminated  0 terminated  0    running  1.
+Before cycle   88:  terminated  0 terminated  0    running  1.
+Before cycle   89:  terminated  0 terminated  0    blocked  3.
+Before cycle   90:  terminated  0 terminated  0    blocked  2.
+Before cycle   91:  terminated  0 terminated  0    blocked  1.
+Before cycle   92:  terminated  0 terminated  0    running  2.
+Before cycle   93:  terminated  0 terminated  0    running  1.
+Before cycle   94:  terminated  0 terminated  0    blocked  2.
+Before cycle   95:  terminated  0 terminated  0    blocked  1.
+Before cycle   96:  terminated  0 terminated  0    running  1.
+Before cycle   97:  terminated  0 terminated  0    blocked  2.
+Before cycle   98:  terminated  0 terminated  0    blocked  1.
+Before cycle   99:  terminated  0 terminated  0    running  2.
+The scheduling algorithm used was Round Robbin
+
+Process 0:
+	(A,B,C,IO) = (0,5,30,3)
+	Finishing time: 79
+	Turnaround time: 79
+	I/O time: 18
+	Waiting time: 31
+
+Process 1:
+	(A,B,C,IO) = (1,5,30,3)
+	Finishing time: 85
+	Turnaround time: 84
+	I/O time: 19
+	Waiting time: 35
+
+Process 2:
+	(A,B,C,IO) = (1,5,30,4)
+	Finishing time: 99
+	Turnaround time: 98
+	I/O time: 30
+	Waiting time: 38
+
+Summary Data:
+	Finishing time: 99
+	CPU Utilization: 0.909091
+	I/O Utilization: 0.575758
+	Throughput: 3.030303 processes per hundred cycles
+	Average turnaround time: 87.000000
+	Average waiting time: 34.666668
+
+The original input was: 3  1 5 30 3  1 5 30 4  0 5 30 3 
+The (sorted) input is:  3  0 5 30 3  1 5 30 3  1 5 30 4 
+
+This detailed printout gives the state and remaining burst for each process
+
+Before cycle    0:   unstarted  0  unstarted  0  unstarted  0.
+Before cycle    1:     running  4  unstarted  0  unstarted  0.
+Before cycle    2:     running  3      ready  0      ready  0.
+Before cycle    3:     running  2      ready  0      ready  0.
+Before cycle    4:     running  1      ready  0      ready  0.
+Before cycle    5:     blocked  2      ready  0      ready  0.
+Before cycle    6:     blocked  1      ready  0      ready  0.
+Before cycle    7:     running  3      ready  0      ready  0.
+Before cycle    8:     running  2      ready  0      ready  0.
+Before cycle    9:     running  1      ready  0      ready  0.
+Before cycle   10:     blocked  2      ready  0      ready  0.
+Before cycle   11:     blocked  1      ready  0      ready  0.
+Before cycle   12:     running  4      ready  0      ready  0.
+Before cycle   13:     running  3      ready  0      ready  0.
+Before cycle   14:     running  2      ready  0      ready  0.
+Before cycle   15:     running  1      ready  0      ready  0.
+Before cycle   16:     blocked  2      ready  0      ready  0.
+Before cycle   17:     blocked  1      ready  0      ready  0.
+Before cycle   18:     running  2      ready  0      ready  0.
+Before cycle   19:     running  1      ready  0      ready  0.
+Before cycle   20:     blocked  1      ready  0      ready  0.
+Before cycle   21:     running  5      ready  0      ready  0.
+Before cycle   22:     running  4      ready  0      ready  0.
+Before cycle   23:     running  3      ready  0      ready  0.
+Before cycle   24:     running  2      ready  0      ready  0.
+Before cycle   25:     running  1      ready  0      ready  0.
+Before cycle   26:     blocked  2      ready  0      ready  0.
+Before cycle   27:     blocked  1      ready  0      ready  0.
+Before cycle   28:     running  3      ready  0      ready  0.
+Before cycle   29:     running  2      ready  0      ready  0.
+Before cycle   30:     running  1      ready  0      ready  0.
+Before cycle   31:     blocked  2      ready  0      ready  0.
+Before cycle   32:     blocked  1      ready  0      ready  0.
+Before cycle   33:     running  1      ready  0      ready  0.
+Before cycle   34:     blocked  2      ready  0      ready  0.
+Before cycle   35:     blocked  1      ready  0      ready  0.
+Before cycle   36:     running  4      ready  0      ready  0.
+Before cycle   37:     running  3      ready  0      ready  0.
+Before cycle   38:     running  2      ready  0      ready  0.
+Before cycle   39:     running  1      ready  0      ready  0.
+Before cycle   40:     blocked  2      ready  0      ready  0.
+Before cycle   41:     blocked  1      ready  0      ready  0.
+Before cycle   42:     running  1      ready  0      ready  0.
+Before cycle   43:     blocked  1      ready  0      ready  0.
+Before cycle   44:     running  3      ready  0      ready  0.
+Before cycle   45:     running  2      ready  0      ready  0.
+Before cycle   46:     running  1      ready  0      ready  0.
+Before cycle   47:  terminated  0    running  2      ready  0.
+Before cycle   48:  terminated  0    running  1      ready  0.
+Before cycle   49:  terminated  0    blocked  3      ready  0.
+Before cycle   50:  terminated  0    blocked  2      ready  0.
+Before cycle   51:  terminated  0    blocked  1      ready  0.
+Before cycle   52:  terminated  0    running  4      ready  0.
+Before cycle   53:  terminated  0    running  3      ready  0.
+Before cycle   54:  terminated  0    running  2      ready  0.
+Before cycle   55:  terminated  0    running  1      ready  0.
+Before cycle   56:  terminated  0    blocked  1      ready  0.
+Before cycle   57:  terminated  0    running  5      ready  0.
+Before cycle   58:  terminated  0    running  4      ready  0.
+Before cycle   59:  terminated  0    running  3      ready  0.
+Before cycle   60:  terminated  0    running  2      ready  0.
+Before cycle   61:  terminated  0    running  1      ready  0.
+Before cycle   62:  terminated  0    blocked  3      ready  0.
+Before cycle   63:  terminated  0    blocked  2      ready  0.
+Before cycle   64:  terminated  0    blocked  1      ready  0.
+Before cycle   65:  terminated  0    running  1      ready  0.
+Before cycle   66:  terminated  0    blocked  3      ready  0.
+Before cycle   67:  terminated  0    blocked  2      ready  0.
+Before cycle   68:  terminated  0    blocked  1      ready  0.
+Before cycle   69:  terminated  0    running  4      ready  0.
+Before cycle   70:  terminated  0    running  3      ready  0.
+Before cycle   71:  terminated  0    running  2      ready  0.
+Before cycle   72:  terminated  0    running  1      ready  0.
+Before cycle   73:  terminated  0    blocked  2      ready  0.
+Before cycle   74:  terminated  0    blocked  1      ready  0.
+Before cycle   75:  terminated  0    running  1      ready  0.
+Before cycle   76:  terminated  0    blocked  3      ready  0.
+Before cycle   77:  terminated  0    blocked  2      ready  0.
+Before cycle   78:  terminated  0    blocked  1      ready  0.
+Before cycle   79:  terminated  0    running  3      ready  0.
+Before cycle   80:  terminated  0    running  2      ready  0.
+Before cycle   81:  terminated  0    running  1      ready  0.
+Before cycle   82:  terminated  0    blocked  1      ready  0.
+Before cycle   83:  terminated  0    running  4      ready  0.
+Before cycle   84:  terminated  0    running  3      ready  0.
+Before cycle   85:  terminated  0    running  2      ready  0.
+Before cycle   86:  terminated  0    running  1      ready  0.
+Before cycle   87:  terminated  0    blocked  3      ready  0.
+Before cycle   88:  terminated  0    blocked  2      ready  0.
+Before cycle   89:  terminated  0    blocked  1      ready  0.
+Before cycle   90:  terminated  0    running  3      ready  0.
+Before cycle   91:  terminated  0    running  2      ready  0.
+Before cycle   92:  terminated  0    running  1      ready  0.
+Before cycle   93:  terminated  0    blocked  2      ready  0.
+Before cycle   94:  terminated  0    blocked  1      ready  0.
+Before cycle   95:  terminated  0    running  2      ready  0.
+Before cycle   96:  terminated  0    running  1      ready  0.
+Before cycle   97:  terminated  0    blocked  2      ready  0.
+Before cycle   98:  terminated  0    blocked  1      ready  0.
+Before cycle   99:  terminated  0    running  3      ready  0.
+Before cycle  100:  terminated  0 terminated  0    running  5.
+Before cycle  101:  terminated  0 terminated  0    running  4.
+Before cycle  102:  terminated  0 terminated  0    running  3.
+Before cycle  103:  terminated  0 terminated  0    running  2.
+Before cycle  104:  terminated  0 terminated  0    running  1.
+Before cycle  105:  terminated  0 terminated  0    blocked  2.
+Before cycle  106:  terminated  0 terminated  0    blocked  1.
+Before cycle  107:  terminated  0 terminated  0    running  2.
+Before cycle  108:  terminated  0 terminated  0    running  1.
+Before cycle  109:  terminated  0 terminated  0    blocked  4.
+Before cycle  110:  terminated  0 terminated  0    blocked  3.
+Before cycle  111:  terminated  0 terminated  0    blocked  2.
+Before cycle  112:  terminated  0 terminated  0    blocked  1.
+Before cycle  113:  terminated  0 terminated  0    running  5.
+Before cycle  114:  terminated  0 terminated  0    running  4.
+Before cycle  115:  terminated  0 terminated  0    running  3.
+Before cycle  116:  terminated  0 terminated  0    running  2.
+Before cycle  117:  terminated  0 terminated  0    running  1.
+Before cycle  118:  terminated  0 terminated  0    blocked  2.
+Before cycle  119:  terminated  0 terminated  0    blocked  1.
+Before cycle  120:  terminated  0 terminated  0    running  4.
+Before cycle  121:  terminated  0 terminated  0    running  3.
+Before cycle  122:  terminated  0 terminated  0    running  2.
+Before cycle  123:  terminated  0 terminated  0    running  1.
+Before cycle  124:  terminated  0 terminated  0    blocked  1.
+Before cycle  125:  terminated  0 terminated  0    running  1.
+Before cycle  126:  terminated  0 terminated  0    blocked  3.
+Before cycle  127:  terminated  0 terminated  0    blocked  2.
+Before cycle  128:  terminated  0 terminated  0    blocked  1.
+Before cycle  129:  terminated  0 terminated  0    running  4.
+Before cycle  130:  terminated  0 terminated  0    running  3.
+Before cycle  131:  terminated  0 terminated  0    running  2.
+Before cycle  132:  terminated  0 terminated  0    running  1.
+Before cycle  133:  terminated  0 terminated  0    blocked  3.
+Before cycle  134:  terminated  0 terminated  0    blocked  2.
+Before cycle  135:  terminated  0 terminated  0    blocked  1.
+Before cycle  136:  terminated  0 terminated  0    running  2.
+Before cycle  137:  terminated  0 terminated  0    running  1.
+Before cycle  138:  terminated  0 terminated  0    blocked  1.
+Before cycle  139:  terminated  0 terminated  0    running  2.
+Before cycle  140:  terminated  0 terminated  0    running  1.
+Before cycle  141:  terminated  0 terminated  0    blocked  2.
+Before cycle  142:  terminated  0 terminated  0    blocked  1.
+Before cycle  143:  terminated  0 terminated  0    running  3.
+Before cycle  144:  terminated  0 terminated  0    running  2.
+Before cycle  145:  terminated  0 terminated  0    running  1.
+Before cycle  146:  terminated  0 terminated  0    blocked  3.
+Before cycle  147:  terminated  0 terminated  0    blocked  2.
+Before cycle  148:  terminated  0 terminated  0    blocked  1.
+Before cycle  149:  terminated  0 terminated  0    running  2.
+Before cycle  150:  terminated  0 terminated  0    running  1.
+The scheduling algorithm used was Uniprocessor
+
+Process 0:
+	(A,B,C,IO) = (0,5,30,3)
+	Finishing time: 46
+	Turnaround time: 46
+	I/O time: 16
+	Waiting time: 0
+
+Process 1:
+	(A,B,C,IO) = (1,5,30,3)
+	Finishing time: 99
+	Turnaround time: 98
+	I/O time: 23
+	Waiting time: 45
+
+Process 2:
+	(A,B,C,IO) = (1,5,30,4)
+	Finishing time: 150
+	Turnaround time: 149
+	I/O time: 21
+	Waiting time: 98
+
+Summary Data:
+	Finishing time: 150
+	CPU Utilization: 0.600000
+	I/O Utilization: 0.400000
+	Throughput: 2.000000 processes per hundred cycles
+	Average turnaround time: 97.666664
+	Average waiting time: 47.666668
+
+The original input was: 3  1 5 30 3  1 5 30 4  0 5 30 3 
+The (sorted) input is:  3  0 5 30 3  1 5 30 3  1 5 30 4 
+
+This detailed printout gives the state and remaining burst for each process
+
+Before cycle    0:   unstarted  0  unstarted  0  unstarted  0.
+Before cycle    1:     running  4  unstarted  0  unstarted  0.
+Before cycle    2:     running  3      ready  0      ready  0.
+Before cycle    3:     running  2      ready  0      ready  0.
+Before cycle    4:     running  1      ready  0      ready  0.
+Before cycle    5:     blocked  2    running  3      ready  0.
+Before cycle    6:     blocked  1    running  2      ready  0.
+Before cycle    7:     running  1      ready  1      ready  0.
+Before cycle    8:     blocked  3    running  1      ready  0.
+Before cycle    9:     blocked  2    blocked  2    running  2.
+Before cycle   10:     blocked  1    blocked  1    running  1.
+Before cycle   11:     running  5      ready  0    blocked  1.
+Before cycle   12:     running  4      ready  0      ready  0.
+Before cycle   13:     running  3      ready  0      ready  0.
+Before cycle   14:     running  2      ready  0      ready  0.
+Before cycle   15:     running  1      ready  0      ready  0.
+Before cycle   16:     blocked  2    running  3      ready  0.
+Before cycle   17:     blocked  1    running  2      ready  0.
+Before cycle   18:     running  3      ready  1      ready  0.
+Before cycle   19:     running  2      ready  1      ready  0.
+Before cycle   20:     running  1      ready  1      ready  0.
+Before cycle   21:     blocked  3    running  1      ready  0.
+Before cycle   22:     blocked  2    blocked  2    running  4.
+Before cycle   23:     blocked  1    blocked  1    running  3.
+Before cycle   24:     running  2      ready  0      ready  2.
+Before cycle   25:     running  1      ready  0      ready  2.
+Before cycle   26:     blocked  1    running  2      ready  2.
+Before cycle   27:     running  3      ready  1      ready  2.
+Before cycle   28:     running  2      ready  1      ready  2.
+Before cycle   29:     running  1      ready  1      ready  2.
+Before cycle   30:     blocked  2    running  1      ready  2.
+Before cycle   31:     blocked  1    blocked  3    running  2.
+Before cycle   32:     running  4    blocked  2      ready  1.
+Before cycle   33:     running  3    blocked  1      ready  1.
+Before cycle   34:     running  2      ready  0      ready  1.
+Before cycle   35:     running  1      ready  0      ready  1.
+Before cycle   36:     blocked  1    running  5      ready  1.
+Before cycle   37:     running  3      ready  4      ready  1.
+Before cycle   38:     running  2      ready  4      ready  1.
+Before cycle   39:     running  1      ready  4      ready  1.
+Before cycle   40:     blocked  3    running  4      ready  1.
+Before cycle   41:     blocked  2    running  3      ready  1.
+Before cycle   42:     blocked  1    running  2      ready  1.
+Before cycle   43:     running  3      ready  1      ready  1.
+Before cycle   44:     running  2      ready  1      ready  1.
+Before cycle   45:     running  1      ready  1      ready  1.
+Before cycle   46:     blocked  2    running  1      ready  1.
+Before cycle   47:     blocked  1    blocked  2    running  1.
+Before cycle   48:     running  5    blocked  1    blocked  4.
+Before cycle   49:     running  4      ready  0    blocked  3.
+Before cycle   50:  terminated  0    running  3    blocked  2.
+Before cycle   51:  terminated  0    running  2    blocked  1.
+Before cycle   52:  terminated  0    running  1      ready  0.
+Before cycle   53:  terminated  0    blocked  1    running  4.
+Before cycle   54:  terminated  0    running  5      ready  3.
+Before cycle   55:  terminated  0    running  4      ready  3.
+Before cycle   56:  terminated  0    running  3      ready  3.
+Before cycle   57:  terminated  0    running  2      ready  3.
+Before cycle   58:  terminated  0    running  1      ready  3.
+Before cycle   59:  terminated  0    blocked  1    running  3.
+Before cycle   60:  terminated  0    running  4      ready  2.
+Before cycle   61:  terminated  0    running  3      ready  2.
+Before cycle   62:  terminated  0    running  2      ready  2.
+Before cycle   63:  terminated  0    running  1      ready  2.
+Before cycle   64:  terminated  0    blocked  2    running  2.
+Before cycle   65:  terminated  0    blocked  1    running  1.
+Before cycle   66:  terminated  0    running  3    blocked  4.
+Before cycle   67:  terminated  0    running  2    blocked  3.
+Before cycle   68:  terminated  0    running  1    blocked  2.
+Before cycle   69:  terminated  0    blocked  1    blocked  1.
+Before cycle   70:  terminated  0    running  4      ready  0.
+Before cycle   71:  terminated  0    running  3      ready  0.
+Before cycle   72:  terminated  0 terminated  0    running  2.
+Before cycle   73:  terminated  0 terminated  0    running  1.
+Before cycle   74:  terminated  0 terminated  0    blocked  4.
+Before cycle   75:  terminated  0 terminated  0    blocked  3.
+Before cycle   76:  terminated  0 terminated  0    blocked  2.
+Before cycle   77:  terminated  0 terminated  0    blocked  1.
+Before cycle   78:  terminated  0 terminated  0    running  5.
+Before cycle   79:  terminated  0 terminated  0    running  4.
+Before cycle   80:  terminated  0 terminated  0    running  3.
+Before cycle   81:  terminated  0 terminated  0    running  2.
+Before cycle   82:  terminated  0 terminated  0    running  1.
+Before cycle   83:  terminated  0 terminated  0    blocked  2.
+Before cycle   84:  terminated  0 terminated  0    blocked  1.
+Before cycle   85:  terminated  0 terminated  0    running  4.
+Before cycle   86:  terminated  0 terminated  0    running  3.
+Before cycle   87:  terminated  0 terminated  0    running  2.
+Before cycle   88:  terminated  0 terminated  0    running  1.
+Before cycle   89:  terminated  0 terminated  0    blocked  1.
+Before cycle   90:  terminated  0 terminated  0    running  1.
+Before cycle   91:  terminated  0 terminated  0    blocked  3.
+Before cycle   92:  terminated  0 terminated  0    blocked  2.
+Before cycle   93:  terminated  0 terminated  0    blocked  1.
+Before cycle   94:  terminated  0 terminated  0    running  4.
+Before cycle   95:  terminated  0 terminated  0    running  3.
+Before cycle   96:  terminated  0 terminated  0    running  2.
+Before cycle   97:  terminated  0 terminated  0    running  1.
+Before cycle   98:  terminated  0 terminated  0    blocked  3.
+Before cycle   99:  terminated  0 terminated  0    blocked  2.
+Before cycle  100:  terminated  0 terminated  0    blocked  1.
+Before cycle  101:  terminated  0 terminated  0    running  2.
+Before cycle  102:  terminated  0 terminated  0    running  1.
+Before cycle  103:  terminated  0 terminated  0    blocked  1.
+Before cycle  104:  terminated  0 terminated  0    running  2.
+Before cycle  105:  terminated  0 terminated  0    running  1.
+The scheduling algorithm used was Preemptive Shortest Job First
+
+Process 0:
+	(A,B,C,IO) = (0,5,30,3)
+	Finishing time: 49
+	Turnaround time: 49
+	I/O time: 19
+	Waiting time: 0
+
+Process 1:
+	(A,B,C,IO) = (1,5,30,3)
+	Finishing time: 71
+	Turnaround time: 70
+	I/O time: 14
+	Waiting time: 26
+
+Process 2:
+	(A,B,C,IO) = (1,5,30,4)
+	Finishing time: 105
+	Turnaround time: 104
+	I/O time: 23
+	Waiting time: 51
+
+Summary Data:
+	Finishing time: 105
+	CPU Utilization: 0.857143
+	I/O Utilization: 0.457143
+	Throughput: 2.857143 processes per hundred cycles
+	Average turnaround time: 74.333336
+	Average waiting time: 25.666666
